@@ -1,4 +1,6 @@
-## This Repo if meant for TCSS 343 Algorithms, Algorithms Programming Project
+# This Repo if meant for TCSS 343 Algorithms, Algorithms Programming Project
+
+## Compare.py will compare the two execution times and plot them.
 
 ### Needman_w is the python file that contains the Needleman Wunsch algorithm code which does Global alignment
 
