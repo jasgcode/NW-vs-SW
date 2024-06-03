@@ -1,6 +1,6 @@
 
 
-
+from Bio import SeqIO
 
 def needleman_wunsch(seq1, seq2, match_score=1, mismatch_score=-1, gap_penalty=-1):
     m, n = len(seq1), len(seq2)
@@ -56,12 +56,3 @@ def needleman_wunsch(seq1, seq2, match_score=1, mismatch_score=-1, gap_penalty=-
     
     return aligned_seq1, aligned_seq2, score_matrix[m][n]
 
-#test seq
-
-seq1 = "ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC"
-seq2 = "GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA"
-
-aligned_seq1, aligned_seq2, score = needleman_wunsch(seq1, seq2)
-print("Aligned Sequence 1:", aligned_seq1)
-print("Aligned Sequence 2:", aligned_seq2)
-print("Alignment Score:", score)

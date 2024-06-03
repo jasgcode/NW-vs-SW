@@ -1,3 +1,4 @@
+from Bio import SeqIO
 def smith_waterman(seq1, seq2, match_score=1, mismatch_score=-1, gap_penalty=-1):
     m, n = len(seq1), len(seq2)
     
@@ -48,11 +49,3 @@ def smith_waterman(seq1, seq2, match_score=1, mismatch_score=-1, gap_penalty=-1)
     return aligned_seq1, aligned_seq2, max_score
 
 
-#test seq
-seq1 = "ATGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGC"
-seq2 = "GCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTAGCTA"
-
-aligned_seq1, aligned_seq2, score = smith_waterman(seq1, seq2)
-print("Aligned Sequence 1:", aligned_seq1)
-print("Aligned Sequence 2:", aligned_seq2)
-print("Alignment Score:", score)
